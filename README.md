@@ -13,15 +13,22 @@ SOA parsing
 Asynchronous Usage
 ==================
 
-Gimme a minute...
+    var fs = require('fs');
+    var dzone = require('dzone');
+
+    dzone.parseZoneFile('../com.zone');
+    dzone.on('recordProcessed', function(err, record) {
+        console.log(record);
+        if(err) console.error(err);
+    });
 
 
 Synchronous Usage
 =================
 
-	var dzone = require('dzone')
-	var zonedata = '@ IN A 127.0.0.1' // can be a line or a whole zonefile
-	var zone = dzone.parseZoneSync(zonedata)
+	var dzone = require('dzone');
+	var zonedata = '@ IN A 127.0.0.1'; // can be a line or a whole zonefile
+	var zone = dzone.parseZoneSync(zonedata);
 
 	{ 
 	records: 
@@ -42,7 +49,7 @@ Synchronous Usage
 
 	// other methods
 
-	var record = dzone.paresLine(zonedata)
+	var record = dzone.parseLine(zonedata);
 
     {
 		name:'@',
