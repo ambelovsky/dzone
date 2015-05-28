@@ -1,2 +1,2 @@
 
-var zonefile = module.exports = require('./lib/zonefile')
+var dzone = module.exports = require('./lib/dzone')

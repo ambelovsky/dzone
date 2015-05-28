@@ -1,18 +1,27 @@
-[![Build Status](https://travis-ci.org/chrillo/zonefile.png?branch=master)](https://travis-ci.org/chrillo/zonefile)
-
 What it does
 ============
 
-pares a DNS zonefile and returns a object with an array of records and the ttl. SOA parsing does not yet work
+Provides async parsing for a DNS zonefile and returns a object with an array of records and the ttl.
 
-	
 
-Usage
+To Do
 =====
 
-	var zonefile = require('zonefile')
+SOA parsing
+
+
+Asynchronous Usage
+==================
+
+Gimme a minute...
+
+
+Synchronous Usage
+=================
+
+	var dzone = require('dzone')
 	var zonedata = '@ IN A 127.0.0.1' // can be a line or a whole zonefile
-	var zone = zonefile.parseZone(zonedata)
+	var zone = dzone.parseZoneSync(zonedata)
 
 	{ 
 	records: 
@@ -33,15 +42,15 @@ Usage
 
 	// other methods
 
-	var record = zonefile.paresLine(zonedata)
+	var record = dzone.paresLine(zonedata)
 
-		{
+    {
 		name:'@',
 		type:'A',
 		ttl:null,
 		data:'127.0.0.1',
 		priority:priority // only set if its an MX record	
-		}
+	}
 
 Test
 ====

@@ -1,21 +1,21 @@
 {
-  "name": "zonefile",
-  "version": "0.0.5",
-  "description": "parser for dns zone files",
+  "name": "dzone",
+  "version": "0.0.1",
+  "description": "async parser for small and large dns zone files",
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/chrillo/zonefile.git"
+    "url": "git://github.com/ambelovsky/dzone.git"
   },
   "keywords": [
     "dns",
     "zone",
     "file"
   ],
-  "author": "christoph peter",
+  "author": "Aaron Belovsky",
   "license": "MIT",
   "devDependencies": {
     "should": "~1.2.2",
