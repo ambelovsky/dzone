@@ -1,13 +1,10 @@
-What it does
-============
-
 Provides async parsing for a DNS zonefile and returns a object with an array of records and the ttl.
 
 
-To Do
-=====
+Installation
+============
 
-SOA parsing
+    npm install dzone --save
 
 
 Asynchronous Usage
@@ -63,5 +60,9 @@ Test
 ====
 
 	npm test
+    
 
+To Do
+=====
 
+SOA parsing
